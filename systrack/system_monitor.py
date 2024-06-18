@@ -14,3 +14,11 @@ def get_memory_usage():
         'inactive': bytes2human(memory.inactive),
         'wired': bytes2human(memory.wired)
     }
+
+# Get the CPU usage statistics
+def get_cpu_usage():
+    cpu = psu.cpu_percent(interval=1, percpu=True)
+    return {
+        'cpu count': len(cpu),
+        'cpu usage': cpu[0]
+    }
