@@ -33,3 +33,13 @@ def get_disk_usage():
         'free': bytes_to_gb(disk.free),
         'percent used': disk.percent
     }
+
+# Get the network statistics
+def get_network_stats():
+    network = psu.net_io_counters()
+    return {
+        'bytes sent': bytes_to_gb(network.bytes_sent),
+        'bytes received': bytes_to_gb(network.bytes_recv),
+        'packets sent': network.packets_sent,
+        'packets received': network.packets_recv
+    }
