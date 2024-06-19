@@ -5,7 +5,7 @@ setup(
     version='0.1.1',
     author='Mrinaal Arora',
     author_email='marora16@asu.edu',
-    description='SysTrack is a real-time system statistics monitoring tool designed for developers and system administrators. It provides insights into CPU, memory, disk, and network usage, enabling efficient system management and performance optimization.',
+    description='Real-time system statistics monitoring.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/VenturaSync/SysTrack',
