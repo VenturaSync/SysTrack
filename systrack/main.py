@@ -62,16 +62,19 @@ def cpu():
     
     console.print(table)
 
+# Disk Command
 @app.command()
 def disk():
     """Displays disk usage statistics."""
     typer.echo(get_disk_usage())
 
+# Network Command
 @app.command()
 def network():
     """Displays network statistics."""
     typer.echo(get_network_stats())
 
+# Sensors Command
 @app.command()
 def sensors():
     """Displays sensor temperature statistics, if available."""

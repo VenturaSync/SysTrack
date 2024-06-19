@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: systracker
-Version: 0.1.0
+Version: 0.1.1
 Summary: SysTrack is a real-time system statistics monitoring tool designed for developers and system administrators. It provides insights into CPU, memory, disk, and network usage, enabling efficient system management and performance optimization.
 Home-page: https://github.com/VenturaSync/SysTrack
 Author: Mrinaal Arora
