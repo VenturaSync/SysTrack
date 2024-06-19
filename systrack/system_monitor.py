@@ -1,4 +1,5 @@
 import psutil as psu
+import sys
 from psutil._common import bytes2human
 from utils import bytes_to_gb
 
@@ -43,3 +44,10 @@ def get_network_stats():
         'packets sent': network.packets_sent,
         'packets received': network.packets_recv
     }
+
+# Get the sensor temperature statistics
+def get_sensor_temps():
+    if sys.platform.startswith('linux') or sys.platform.startswith('freebsd'):
+        return psu.sensors_temperatures()
+    else:
+        return "Temperature sensors not supported on this OS"
