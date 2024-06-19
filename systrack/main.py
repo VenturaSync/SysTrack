@@ -14,7 +14,17 @@ def memory():
 @app.command()
 def cpu():
     """Displays CPU usage statistics."""
-    typer.echo(get_cpu_usage())
+    CPU_Usage = get_cpu_usage()
+
+    cpu_count = str(CPU_Usage["cpu count"])
+    cpu_usage = str(CPU_Usage["cpu usage"]) + "%"
+
+    table = Table(title="CPU Stats")
+    table.add_column("Metric", style="bold", width=12)
+    table.add_column("Value", style="bold")
+    table.add_row("CPU Cores", cpu_count)
+    table.add_row("CPU Usage", cpu_usage)
+    console.print(table)
 
 @app.command()
 def disk():
@@ -30,18 +40,6 @@ def network():
 def sensors():
     """Displays sensor temperature statistics, if available."""
     typer.echo(get_sensor_temps())
-
-# @app.command()
-# def show_data():
-#     table = Table(title="System Stats")
-
-#     table.add_column("Metric", style="dim", width=12)
-#     table.add_column("Value", style="bold")
-
-#     table.add_row("CPU", "50%")
-#     table.add_row("Memory", "8 GB")
-    
-#     console.print(table)
 
 if __name__ == "__main__":
     app()
