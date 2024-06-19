@@ -5,8 +5,6 @@ Summary: SysTrack is a real-time system statistics monitoring tool designed for 
 Home-page: https://github.com/VenturaSync/SysTrack
 Author: Mrinaal Arora
 Author-email: marora16@asu.edu
-License: UNKNOWN
-Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
 Classifier: Intended Audience :: System Administrators
@@ -21,6 +19,46 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: appnope==0.1.4
+Requires-Dist: asttokens==2.4.1
+Requires-Dist: click==8.1.7
+Requires-Dist: colorama==0.4.6
+Requires-Dist: comm==0.2.2
+Requires-Dist: debugpy==1.8.1
+Requires-Dist: decorator==5.1.1
+Requires-Dist: exceptiongroup==1.2.1
+Requires-Dist: executing==2.0.1
+Requires-Dist: importlib_metadata==7.1.0
+Requires-Dist: ipykernel==6.29.4
+Requires-Dist: ipython==8.18.1
+Requires-Dist: jedi==0.19.1
+Requires-Dist: jupyter_client==8.6.2
+Requires-Dist: jupyter_core==5.7.2
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: matplotlib-inline==0.1.7
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: nest-asyncio==1.6.0
+Requires-Dist: packaging==24.1
+Requires-Dist: parso==0.8.4
+Requires-Dist: pexpect==4.9.0
+Requires-Dist: platformdirs==4.2.2
+Requires-Dist: prompt_toolkit==3.0.47
+Requires-Dist: psutil==5.9.8
+Requires-Dist: ptyprocess==0.7.0
+Requires-Dist: pure-eval==0.2.2
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pyzmq==26.0.3
+Requires-Dist: rich==13.7.1
+Requires-Dist: shellingham==1.5.4
+Requires-Dist: six==1.16.0
+Requires-Dist: stack-data==0.6.3
+Requires-Dist: tabulate==0.9.0
+Requires-Dist: tornado==6.4.1
+Requires-Dist: traitlets==5.14.3
+Requires-Dist: typer==0.12.3
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: wcwidth==0.2.13
+Requires-Dist: zipp==3.19.2
 
 # SysTrack
-
