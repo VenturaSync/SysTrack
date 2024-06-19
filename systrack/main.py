@@ -7,11 +7,40 @@ from rich import box
 app = typer.Typer()
 console = Console()
 
+# Memory Command
 @app.command()
 def memory():
     """Displays memory usage statistics."""
-    typer.echo(get_memory_usage())
+    Memory_Usage = get_memory_usage()
+    total_memory = str(Memory_Usage["total"]) + " GB"
+    available_memory = str(Memory_Usage["available"]) + " GB"
+    percent_memory_used = str(Memory_Usage["percent used"]) + "%"
+    memory_used = str(Memory_Usage["used"]) + " GB"
+    memory_free = str(Memory_Usage["free"]) + " GB"
+    memory_active = str(Memory_Usage["active"]) + " GB"
+    memory_inactive = str(Memory_Usage["inactive"]) + " GB"
+    memory_wired = str(Memory_Usage["wired"]) + " GB"
 
+    table = Table(title="Memory Stats", box=box.ROUNDED)
+
+    table.add_column("Total", justify="center", style="bold green", overflow="ellipsis")
+    table.add_column("Available", style="bold green", overflow="ellipsis")
+    table.add_column("Used %", style="bold green", overflow="ellipsis")
+    table.add_column("Used", style="bold green", overflow="ellipsis")
+    table.add_column("Free", style="bold green",overflow="ellipsis")
+    table.add_column("Active", style="bold green", overflow="ellipsis")
+    table.add_column("Inactive", style="bold green", overflow="ellipsis")
+    table.add_column("Wired", style="bold", overflow="ellipsis")
+
+    table.add_row(
+        total_memory, available_memory, percent_memory_used, 
+        memory_used, memory_free, memory_active, 
+        memory_inactive, memory_wired
+    )
+
+    console.print(table)
+
+# CPU Command
 @app.command()
 def cpu():
     """Displays CPU usage statistics."""
