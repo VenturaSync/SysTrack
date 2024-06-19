@@ -50,4 +50,4 @@ def get_sensor_temps():
     if sys.platform.startswith('linux') or sys.platform.startswith('freebsd'):
         return psu.sensors_temperatures()
     else:
-        return "Temperature sensors not supported on this OS"
+        return "Temperature sensors not supported on this OS\nOnly Linux and FreeBSD are supported at the moment."
