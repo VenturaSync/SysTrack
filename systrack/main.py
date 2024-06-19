@@ -1,5 +1,6 @@
 import typer
 from system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats, get_sensor_temps
+from hardware_info import get_cpu_info
 from rich.console import Console
 from rich.table import Table
 from rich import box
@@ -116,6 +117,28 @@ def temperature():
     """Displays sensor temperature statistics, if available."""
     message = get_sensor_temps()
     console.print(message, style="bold green",justify="center")
+
+# Hardware Command
+@app.command()
+def hardware():
+    cpu_info = get_cpu_info()
+    brand_raw = cpu_info["brand_raw"]
+    cores = str(cpu_info["count"])
+    bits = str(cpu_info["bits"])
+    arch_string_raw = cpu_info["arch"]
+
+    table = Table(title="Hardware Info", box=box.MINIMAL)
+
+    table.add_column("CPU Brand", justify="center", style="bold cyan2", overflow="ellipsis")
+    table.add_column("Cores", style="bold cyan2", overflow="ellipsis")
+    table.add_column("Bits", style="bold cyan2", overflow="ellipsis")
+    table.add_column("Architecture", style="bold cyan2", overflow="ellipsis")
+
+    table.add_row(
+        brand_raw, cores, bits, arch_string_raw
+    )
+
+    console.print(table)
 
 if __name__ == "__main__":
     app()
