@@ -1,32 +1,50 @@
-name: Upload Python Package
+name: Publish Python 🐍 distributions 📦 to PyPI
 
 on:
-  workflow_dispatch:
   push:
-    tags:
-      - 'v*'
-
-permissions:
-  contents: read
+    branches:
+      - main  # This workflow triggers on pushes to the main branch.
 
 jobs:
-  deploy:
+  build-and-publish:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v3
+    - uses: actions/checkout@v3
       with:
-        python-version: '3.x'
+        fetch-depth: 0  # Ensures history is available for version tags, if needed
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9.6'  # Specific Python version for your project
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build twine
+        python -m pip install build twine bump2version
+
+    - name: Bump version and commit changes
+      run: |
+        bump2version patch  # Automatically increments the patch version
+      env:
+        GIT_COMMITTER_NAME: github-actions
+        GIT_COMMITTER_EMAIL: github-actions@github.com
+        GIT_AUTHOR_NAME: github-actions
+        GIT_AUTHOR_EMAIL: github-actions@github.com
+
     - name: Build package
-      run: python -m build
-    - name: Publish package to PyPI
-      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        python -m build
+
+    - name: Publish to PyPI
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        twine upload dist/*
+
+    - name: Push version commit
+      run: |
+        git config --local user.email "github-actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git push
