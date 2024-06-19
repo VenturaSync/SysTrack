@@ -3,29 +3,20 @@ name: Publish Python 🐍 distributions 📦 to PyPI
 on:
   push:
     branches:
-      - main  # This workflow triggers on pushes to the main branch.
+      - main
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     container:
-      image: python:3.9.6  # Use a Docker image with Python 3.9.6
+      image: python:3.9.6
     steps:
     - uses: actions/checkout@v3
 
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install build twine bump2version
-
-    - name: Bump version and commit changes
-      run: |
-        bump2version patch  # Automatically increments the patch version
-      env:
-        GIT_COMMITTER_NAME: github-actions
-        GIT_COMMITTER_EMAIL: github-actions@github.com
-        GIT_AUTHOR_NAME: github-actions
-        GIT_AUTHOR_EMAIL: github-actions@github.com
+        pip install build twine
 
     - name: Build package
       run: |
@@ -37,9 +28,3 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: |
         twine upload dist/*
-
-    - name: Push version commit
-      run: |
-        git config --local user.email "github-actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git push

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='systracker',
-    version='0.1.0',
+    version='0.1.1',
     author='Mrinaal Arora',
     author_email='marora16@asu.edu',
     description='SysTrack is a real-time system statistics monitoring tool designed for developers and system administrators. It provides insights into CPU, memory, disk, and network usage, enabling efficient system management and performance optimization.',
