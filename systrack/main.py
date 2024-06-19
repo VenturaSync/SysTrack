@@ -66,19 +66,56 @@ def cpu():
 @app.command()
 def disk():
     """Displays disk usage statistics."""
-    typer.echo(get_disk_usage())
+    # typer.echo(get_disk_usage())
+    Disk_Usage = get_disk_usage()
+    total_disk = str(Disk_Usage["total"]) + " GB"
+    used_disk = str(Disk_Usage["used"]) + " GB"
+    free_disk = str(Disk_Usage["free"]) + " GB"
+    percent_disk_used = str(Disk_Usage["percent used"]) + "%"
+
+    table = Table(title="Disk Stats", box=box.HEAVY)
+
+    table.add_column("Total", justify="center", style="bold yellow", overflow="ellipsis")
+    table.add_column("Used", style="bold yellow", overflow="ellipsis")
+    table.add_column("Free", style="bold yellow", overflow="ellipsis")
+    table.add_column("Used %", style="bold yellow", overflow="ellipsis")
+
+    table.add_row(
+        total_disk, used_disk, free_disk, percent_disk_used
+    )
+
+    console.print(table)
 
 # Network Command
 @app.command()
 def network():
     """Displays network statistics."""
-    typer.echo(get_network_stats())
+    # typer.echo(get_network_stats())
+    Network_Stats = get_network_stats()
+    bytes_sent = str(Network_Stats["bytes sent"]) + " B"
+    bytes_recv = str(Network_Stats["bytes received"]) + " B"
+    packets_sent = str(Network_Stats["packets sent"])
+    packets_recv = str(Network_Stats["packets received"])
+
+    table = Table(title="Network Stats", box=box.MINIMAL)
+
+    table.add_column("Bytes Sent", justify="center", style="bold blue", overflow="ellipsis")
+    table.add_column("Bytes Received", style="bold blue", overflow="ellipsis")
+    table.add_column("Packets Sent", style="bold blue", overflow="ellipsis")
+    table.add_column("Packets Received", style="bold blue", overflow="ellipsis")
+
+    table.add_row(
+        bytes_sent, bytes_recv, packets_sent, packets_recv
+    )
+
+    console.print(table)
 
 # Sensors Command
 @app.command()
-def sensors():
+def temperature():
     """Displays sensor temperature statistics, if available."""
-    typer.echo(get_sensor_temps())
+    message = get_sensor_temps()
+    console.print(message, style="bold green",justify="center")
 
 if __name__ == "__main__":
     app()
