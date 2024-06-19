@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: systracker
+Version: 0.1.0
+Summary: SysTrack is a real-time system statistics monitoring tool designed for developers and system administrators. It provides insights into CPU, memory, disk, and network usage, enabling efficient system management and performance optimization.
+Home-page: https://github.com/VenturaSync/SysTrack
+Author: Mrinaal Arora
+Author-email: marora16@asu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: System :: Monitoring
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SysTrack
+

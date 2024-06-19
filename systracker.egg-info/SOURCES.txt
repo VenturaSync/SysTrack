@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+systrack/__init__.py
+systrack/main.py
+systrack/system_monitor.py
+systrack/utils.py
+systracker.egg-info/PKG-INFO
+systracker.egg-info/SOURCES.txt
+systracker.egg-info/dependency_links.txt
+systracker.egg-info/entry_points.txt
+systracker.egg-info/requires.txt
+systracker.egg-info/top_level.txt

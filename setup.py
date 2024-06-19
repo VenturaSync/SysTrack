@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='systrack',
+    name='systracker',
     version='0.1.0',
     author='Mrinaal Arora',
     author_email='marora16@asu.edu',
