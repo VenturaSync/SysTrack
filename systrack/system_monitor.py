@@ -52,4 +52,3 @@ def get_sensor_temps():
     else:
         return "Temperature sensors not supported on this OS\nOnly Linux and FreeBSD are supported at the moment."
 
-

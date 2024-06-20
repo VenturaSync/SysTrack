@@ -2,6 +2,7 @@ LICENSE
 README.md
 setup.py
 systrack/__init__.py
+systrack/dashboard.py
 systrack/hardware_info.py
 systrack/main.py
 systrack/system_monitor.py
