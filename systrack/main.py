@@ -4,6 +4,7 @@ from hardware_info import get_cpu_info
 from rich.console import Console
 from rich.table import Table
 from rich import box
+from dashboard import create_dashboard
 
 app = typer.Typer()
 console = Console()
@@ -139,6 +140,12 @@ def hardware():
     )
 
     console.print(table)
+
+# Dashboard Command
+@app.command()
+def dashboard():
+    """Displays a live dashboard of system statistics that changes dynamically."""
+    create_dashboard()
 
 if __name__ == "__main__":
     app()
