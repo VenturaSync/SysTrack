@@ -1,7 +1,7 @@
 from rich.console import Console
 from rich.live import Live
 from rich.table import Table
-from system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats
+from systrack.system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats
 import time
 
 def generate_table():

@@ -1,10 +1,10 @@
 import typer
-from system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats, get_sensor_temps
-from hardware_info import get_cpu_info
+from systrack.system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats, get_sensor_temps
+from systrack.hardware_info import get_cpu_info
 from rich.console import Console
 from rich.table import Table
 from rich import box
-from dashboard import create_dashboard
+from systrack.dashboard import create_dashboard
 
 app = typer.Typer()
 console = Console()
