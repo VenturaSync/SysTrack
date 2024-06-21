@@ -6,16 +6,23 @@ from rich.console import Console
 from rich.table import Table
 from rich import box
 from rich.markdown import Markdown
+from rich.text import Text
 from typer import Context
 
 app = typer.Typer()
 console = Console()
 
 def custom_help(ctx: Context):
-    """
-    Display custom help message using rich.
-    """
+    # """
+    # Display custom help message using rich.
+    # """
     console = Console()
+
+    title_text = "SysTrack"
+    title = Text(title_text, style="bold magenta on black", justify="center")
+    title.stylize("bold underline magenta on black")
+
+    console.print(title)
     
 
 # Set the callback for --help to use the custom_help function
