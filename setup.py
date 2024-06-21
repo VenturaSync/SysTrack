@@ -69,7 +69,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'systrack=systrack.main:main',
+            'systrack=systrack.main:app',
         ],
     },
     include_package_data=True,
