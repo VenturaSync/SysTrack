@@ -6,30 +6,24 @@ from rich.console import Console
 from rich.table import Table
 from rich import box
 from rich.markdown import Markdown
+from rich.text import Text
 from typer import Context
 
 app = typer.Typer()
 console = Console()
 
 def custom_help(ctx: Context):
-    """
-    Display custom help message using rich.
-    """
+    # """
+    # Display custom help message using rich.
+    # """
     console = Console()
-    help_text = """
-    # SysTrack Help
+
+    title_text = "SysTrack"
+    title = Text(title_text, style="bold magenta on black", justify="center")
+    title.stylize("bold underline magenta on black")
+
+    console.print(title)
     
-    **Usage**: `systrack [OPTIONS] COMMAND [ARGS]...`
-    
-    **Options**:
-    - `--help`: Show this message and exit.
-    
-    **Commands**:
-    - `memory`: Displays memory usage statistics.
-    - `cpu`: Displays CPU usage statistics.
-    - `disk`: Displays disk usage statistics.
-    """
-    console.print(Markdown(help_text))
 
 # Set the callback for --help to use the custom_help function
 app.callback(invoke_without_command=True)(custom_help)
