@@ -1,7 +1,7 @@
 import psutil as psu
 import sys
 from psutil._common import bytes2human
-from utils import bytes_to_gb
+from systrack.utils import bytes_to_gb
 
 # Get memory usage statistics
 def get_memory_usage():

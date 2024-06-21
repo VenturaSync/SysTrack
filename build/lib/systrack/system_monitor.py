@@ -51,5 +51,3 @@ def get_sensor_temps():
         return psu.sensors_temperatures()
     else:
         return "Temperature sensors not supported on this OS\nOnly Linux and FreeBSD are supported at the moment."
-
-
