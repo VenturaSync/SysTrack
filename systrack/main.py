@@ -1,13 +1,25 @@
 import typer
 from systrack.system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats, get_sensor_temps
 from systrack.hardware_info import get_cpu_info
+from systrack.dashboard import create_dashboard
 from rich.console import Console
 from rich.table import Table
 from rich import box
-from systrack.dashboard import create_dashboard
+from rich.markdown import Markdown
+from typer import Context
 
 app = typer.Typer()
 console = Console()
+
+def custom_help(ctx: Context):
+    """
+    Display custom help message using rich.
+    """
+    console = Console()
+    
+
+# Set the callback for --help to use the custom_help function
+app.callback(invoke_without_command=True)(custom_help)
 
 # Memory Command
 @app.command()
