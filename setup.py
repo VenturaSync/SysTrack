@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='systracker',
-    version='0.1.5',
+    version='0.1.6',
     author='Mrinaal Arora',
     author_email='marora16@asu.edu',
     description='Real-time system statistics monitoring.',
