@@ -52,7 +52,7 @@ This command is particularly useful for quickly assessing the CPU's capacity and
 
 ## systrack disk
 
-![systrack disk command output](path_to_systrack_disk_screenshot.png)
+![systrack disk command output](images/systrack_disk.png)
 
 [Add functionality description for the disk command here]
 
