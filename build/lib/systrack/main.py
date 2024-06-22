@@ -8,25 +8,46 @@ from rich import box
 from rich.markdown import Markdown
 from rich.text import Text
 from typer import Context
+from pyfiglet import Figlet
 
 app = typer.Typer()
 console = Console()
 
 def custom_help(ctx: Context):
-    # """
-    # Display custom help message using rich.
-    # """
+    """
+    Display custom help message using rich and pyfiglet for stylized headers.
+    """
     console = Console()
+    figlet = Figlet(font='slant')
 
-    title_text = "SysTrack"
-    title = Text(title_text, style="bold magenta on black", justify="center")
-    title.stylize("bold underline magenta on black")
+    title = figlet.renderText('SysTrack')
+    console.print(title, style="bold green")
 
-    console.print(title)
-    
+    help_text = Text("""
+Usage: systrack [OPTIONS] COMMAND [ARGS]...
 
-# Set the callback for --help to use the custom_help function
-app.callback(invoke_without_command=True)(custom_help)
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  cpu         Displays CPU usage statistics.
+  dashboard   Displays a live dashboard of system statistics.
+  disk        Displays disk usage statistics.
+  hardware    Displays hardware information.
+  memory      Displays memory usage statistics.
+  network     Displays network statistics.
+  temperature Displays temperature statistics.
+    """, style="magenta")
+    console.print(help_text)
+
+@app.callback(invoke_without_command=True)
+def main(ctx: typer.Context):
+    """
+    SysTrack is a CLI for monitoring system statistics in real-time.
+    """
+    if ctx.invoked_subcommand is None:
+        custom_help(ctx)
+
 
 # Memory Command
 @app.command()
