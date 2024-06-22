@@ -1,2 +1,3 @@
-
-![alt text](<main.png>)
+<p align="center">
+  <img src="main.png" alt="alt text">
+</p>
