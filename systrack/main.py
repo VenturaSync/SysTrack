@@ -18,13 +18,11 @@ def custom_help(ctx: Context):
     Display custom help message using rich and pyfiglet for stylized headers.
     """
     console = Console()
-    figlet = Figlet(font='slant')  # You can choose any available font
+    figlet = Figlet(font='slant')
 
-    # Generate and print the title using pyfiglet
     title = figlet.renderText('SysTrack')
-    console.print(title, style="bold green")  # You can adjust the style as needed
+    console.print(title, style="bold green")
 
-    # Optionally add more rich-formatted text or help information below
     help_text = Text("""
 Usage: systrack [OPTIONS] COMMAND [ARGS]...
 
