@@ -34,9 +34,15 @@ The `systrack help` command provides an overview of all available commands in th
 
 ## systrack cpu
 
-![systrack cpu command output](path_to_systrack_cpu_screenshot.png)
+![systrack cpu command output](images/systrack_cpu.png)
 
-[Add functionality description for the CPU command here]
+The `systrack cpu` command provides a quick and visually appealing snapshot of the system's CPU statistics. It displays information in a neatly formatted table with two key metrics:
+
+1. **CPU Cores**: Shows the total number of CPU cores available on the system. In this example, the system has 8 cores.
+
+2. **CPU Usage**: Displays the current CPU utilization as a percentage. The screenshot shows a 24.0% usage, indicating the current load on the CPU.
+
+This command is particularly useful for quickly assessing the CPU's capacity and its current workload. The clear, color-coded output makes it easy to read and interpret at a glance, making it an excellent tool for system administrators and users who need to monitor CPU performance regularly.
 
 ## systrack dashboard
 
