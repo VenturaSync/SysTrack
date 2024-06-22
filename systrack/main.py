@@ -37,7 +37,7 @@ Commands:
   network     Displays network statistics.
   temperature Displays temperature statistics.
     """
-    console.print(Text(help_text, style="magenta"))
+    console.print(Text(help_text, style="plum1"))
 
 @app.command(name="help", help="Show this custom help message.")
 def help_command():
