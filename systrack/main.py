@@ -20,7 +20,7 @@ def display_help():
     console = Console()
     figlet = Figlet(font='slant')
     title = figlet.renderText('SysTrack')
-    console.print(title, style="bold green")
+    console.print(title, style="bold blue")
 
     help_text = """
 Usage: systrack [OPTIONS] COMMAND [ARGS]...
