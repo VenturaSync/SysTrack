@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='systracker',
-    version='0.2.1',
+    version='0.2.2',
     author='Mrinaal Arora',
     author_email='marora16@asu.edu',
     description='Real-time system statistics monitoring.',
@@ -37,6 +37,7 @@ setup(
         'importlib_metadata==7.1.0',
         'ipykernel==6.29.4',
         'ipython==8.18.1',
+        'py-cpuinfo==9.0.0',
         'jedi==0.19.1',
         'jupyter_client==8.6.2',
         'jupyter_core==5.7.2',
