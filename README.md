@@ -95,9 +95,3 @@ This command is particularly useful for quickly identifying the system's hardwar
 ![systrack network command output](path_to_systrack_network_screenshot.png)
 
 [Add functionality description for the network command here]
-
-## systrack temperature
-
-![systrack temperature command output](path_to_systrack_temperature_screenshot.png)
-
-[Add functionality description for the temperature command here]
