@@ -13,8 +13,35 @@ from pyfiglet import Figlet
 app = typer.Typer(add_completion=False)
 console = Console()
 
+def display_help():
+    """
+    Displays a custom help message using Rich and Pyfiglet for stylized headers.
+    """
+    console = Console()
+    figlet = Figlet(font='slant')
+    title = figlet.renderText('SysTrack')
+    console.print(title, style="bold green")
 
+    help_text = """
+Usage: systrack [OPTIONS] COMMAND [ARGS]...
 
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  cpu         Displays CPU usage statistics.
+  dashboard   Displays a live dashboard of system statistics.
+  disk        Displays disk usage statistics.
+  hardware    Displays hardware information.
+  memory      Displays memory usage statistics.
+  network     Displays network statistics.
+  temperature Displays temperature statistics.
+    """
+    console.print(Text(help_text, style="magenta"))
+
+@app.command(name="help", help="Show this custom help message.")
+def help_command():
+    display_help()
 
 # Memory Command
 @app.command()
