@@ -2,7 +2,7 @@
   <img src="main.png" alt="alt text">
 </p>
 
-# SysTrack
+<h1 align="center">SysTrack</h1>
 
 SysTrack is a powerful CLI tool for monitoring and tracking system resources in real-time.
 
