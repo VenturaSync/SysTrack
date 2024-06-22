@@ -13,9 +13,6 @@ app = typer.Typer()
 console = Console()
 
 def custom_help(ctx: Context):
-    # """
-    # Display custom help message using rich.
-    # """
     console = Console()
 
     title_text = "SysTrack"
