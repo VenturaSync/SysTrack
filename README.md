@@ -46,21 +46,43 @@ This command is particularly useful for quickly assessing the CPU's capacity and
 
 ## systrack dashboard
 
-![systrack dashboard command output](images/systrack_dashboard.png)
+![systrack dashboard command output](path_to_systrack_dashboard_screenshot.png)
 
-[Add functionality description for the dashboard command here]
+The `systrack dashboard` command provides a comprehensive real-time overview of key system metrics. This dynamic dashboard displays:
+
+- Total and Available Memory: Shows the system's total RAM (8.0 GB) and currently available memory.
+- Used Memory: Indicates the amount of RAM currently in use.
+- CPU Usage: Displays current CPU utilization as a percentage (31.3% in this example).
+- Disk Free: Shows the amount of free storage space on the system.
+- Network Statistics: Provides data on network usage, including sent and received data.
+
+This command is invaluable for system administrators and users who need a quick, all-in-one view of their system's current state and performance.
 
 ## systrack disk
 
-![systrack disk command output](images/systrack_disk.png)
+![systrack disk command output](path_to_systrack_disk_screenshot.png)
 
-[Add functionality description for the disk command here]
+The `systrack disk` command offers a detailed snapshot of the system's disk usage. It presents information in a clear, tabular format:
+
+- Total: Displays the total disk capacity (228.27 GB in this case).
+- Used: Shows the amount of disk space currently in use (19.23 GB).
+- Free: Indicates the available disk space (28.50 GB).
+- Used %: Provides the percentage of disk space utilized (40.3%).
+
+This command is essential for monitoring storage utilization, helping users manage their disk space effectively and plan for future storage needs.
 
 ## systrack hardware
 
 ![systrack hardware command output](path_to_systrack_hardware_screenshot.png)
 
-[Add functionality description for the hardware command here]
+The `systrack hardware` command delivers key information about the system's CPU hardware:
+
+- CPU Brand: Identifies the processor (Apple M1 in this instance).
+- Cores: Shows the number of CPU cores (8 cores).
+- Bits: Indicates the processor architecture bit-depth (64-bit).
+- Architecture: Specifies the CPU architecture (ARM_8).
+
+This command is particularly useful for quickly identifying the system's hardware capabilities, which is valuable for software compatibility checks, performance expectations, and system requirements assessments.
 
 ## systrack memory
 
