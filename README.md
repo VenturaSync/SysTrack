@@ -4,7 +4,7 @@
 
 <h1 align="center">SysTrack</h1>
 
-SysTrack is a powerful CLI tool for monitoring and tracking system resources in real-time.
+<p align='center'>SysTrack is a powerful CLI tool for monitoring and tracking system resources in real-time.</p>
 
 ## Features
 
