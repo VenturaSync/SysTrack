@@ -46,7 +46,7 @@ This command is particularly useful for quickly assessing the CPU's capacity and
 
 ## systrack dashboard
 
-![systrack dashboard command output](path_to_systrack_dashboard_screenshot.png)
+![systrack dashboard command output](images/systrack_dashboard.png)
 
 [Add functionality description for the dashboard command here]
 
