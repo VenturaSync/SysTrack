@@ -1,2 +1,2 @@
 
-![alt text](<terminal.png>)
+![alt text](<main.png>)
