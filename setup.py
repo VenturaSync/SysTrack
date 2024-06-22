@@ -46,6 +46,7 @@ setup(
         'mdurl==0.1.2',
         'nest-asyncio==1.6.0',
         'packaging==24.1',
+        'pyfiglet==1.0.2'
         'parso==0.8.4',
         'pexpect==4.9.0',
         'platformdirs==4.2.2',
