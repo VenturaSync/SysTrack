@@ -1,7 +1,7 @@
 import typer
-from systrack.system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats, get_sensor_temps
-from systrack.hardware_info import get_cpu_info
-from systrack.dashboard import create_dashboard
+from system_monitor import get_memory_usage, get_cpu_usage, get_disk_usage, get_network_stats, get_sensor_temps
+from hardware_info import get_cpu_info
+from dashboard import create_dashboard
 from rich.console import Console
 from rich.table import Table
 from rich import box
@@ -10,43 +10,10 @@ from rich.text import Text
 from typer import Context
 from pyfiglet import Figlet
 
-app = typer.Typer()
+app = typer.Typer(add_completion=False)
 console = Console()
 
-def custom_help(ctx: Context):
-    """
-    Display custom help message using rich and pyfiglet for stylized headers.
-    """
-    console = Console()
-    figlet = Figlet(font='slant')
 
-    title = figlet.renderText('SysTrack')
-    console.print(title, style="bold green")
-
-    help_text = Text("""
-Usage: systrack [OPTIONS] COMMAND [ARGS]...
-
-Options:
-  --help  Show this message and exit.
-
-Commands:
-  cpu         Displays CPU usage statistics.
-  dashboard   Displays a live dashboard of system statistics.
-  disk        Displays disk usage statistics.
-  hardware    Displays hardware information.
-  memory      Displays memory usage statistics.
-  network     Displays network statistics.
-  temperature Displays temperature statistics.
-    """, style="magenta")
-    console.print(help_text)
-
-@app.callback(invoke_without_command=True)
-def main(ctx: typer.Context):
-    """
-    SysTrack is a CLI for monitoring system statistics in real-time.
-    """
-    if ctx.invoked_subcommand is None:
-        custom_help(ctx)
 
 
 # Memory Command
