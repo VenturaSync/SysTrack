@@ -46,7 +46,7 @@ This command is particularly useful for quickly assessing the CPU's capacity and
 
 ## systrack dashboard
 
-![systrack dashboard command output](path_to_systrack_dashboard_screenshot.png)
+![systrack dashboard command output](images/systrack_dashboard.png)
 
 The `systrack dashboard` command provides a comprehensive real-time overview of key system metrics. This dynamic dashboard displays:
 
@@ -60,7 +60,7 @@ This command is invaluable for system administrators and users who need a quick,
 
 ## systrack disk
 
-![systrack disk command output](path_to_systrack_disk_screenshot.png)
+![systrack disk command output](images/systrack_disk.png)
 
 The `systrack disk` command offers a detailed snapshot of the system's disk usage. It presents information in a clear, tabular format:
 
@@ -73,7 +73,7 @@ This command is essential for monitoring storage utilization, helping users mana
 
 ## systrack hardware
 
-![systrack hardware command output](path_to_systrack_hardware_screenshot.png)
+![systrack hardware command output](images/systrack_hardware.png)
 
 The `systrack hardware` command delivers key information about the system's CPU hardware:
 
