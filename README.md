@@ -28,7 +28,7 @@ This section provides an overview of all available commands in the SysTrack CLI 
 
 ## systrack help
 
-![systrack help command output](/images/systrack_help.png)
+![systrack help command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_cpu.png)
 
 The `systrack help` command provides an overview of all available commands in the SysTrack CLI tool. It displays a stylized ASCII art logo of "SysTrack" followed by usage instructions, available options, and a list of all commands with brief descriptions. This command is essential for users to quickly understand the tool's capabilities and how to use each feature. The help output includes information on CPU, dashboard, disk, hardware, memory, network, and temperature commands, giving users a comprehensive guide to monitoring various aspects of their system.
 
@@ -46,7 +46,7 @@ This command is particularly useful for quickly assessing the CPU's capacity and
 
 ## systrack dashboard
 
-![systrack dashboard command output](/images/systrack_dashboard.png)
+![systrack dashboard command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_dashboard.png)
 
 The `systrack dashboard` command provides a comprehensive real-time overview of key system metrics. This dynamic dashboard displays:
 
@@ -60,7 +60,7 @@ This command is invaluable for system administrators and users who need a quick,
 
 ## systrack disk
 
-![systrack disk command output](/images/systrack_disk.png)
+![systrack disk command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_disk.png)
 
 The `systrack disk` command offers a detailed snapshot of the system's disk usage. It presents information in a clear, tabular format:
 
@@ -73,7 +73,7 @@ This command is essential for monitoring storage utilization, helping users mana
 
 ## systrack hardware
 
-![systrack hardware command output](/images/systrack_hardware.png)
+![systrack hardware command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_hardware.png)
 
 The `systrack hardware` command delivers key information about the system's CPU hardware:
 
@@ -86,7 +86,7 @@ This command is particularly useful for quickly identifying the system's hardwar
 
 ## systrack memory
 
-![systrack memory command output](/images/systrack_memory.png)
+![systrack memory command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_memory.png)
 
 
 The `systrack memory` command provides a comprehensive overview of the system's memory statistics. It displays information in a neatly formatted table with the following metrics:
@@ -104,7 +104,7 @@ This command is useful for quickly assessing memory usage and availability, help
 
 ## systrack network
 
-![systrack network command output](/images/systrack_network.png)
+![systrack network command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_network.png)
 
 The `systrack network` command offers a snapshot of the system's network activity. It presents network statistics in a clear, tabular format with four key metrics:
 
