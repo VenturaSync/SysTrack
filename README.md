@@ -34,7 +34,7 @@ The `systrack help` command provides an overview of all available commands in th
 
 ## systrack cpu
 
-![systrack cpu command output](/images/systrack_cpu.png)
+![systrack cpu command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_cpu.png)
 
 The `systrack cpu` command provides a quick and visually appealing snapshot of the system's CPU statistics. It displays information in a neatly formatted table with two key metrics:
 
