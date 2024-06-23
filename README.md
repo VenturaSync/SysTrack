@@ -88,7 +88,19 @@ This command is particularly useful for quickly identifying the system's hardwar
 
 ![systrack memory command output](path_to_systrack_memory_screenshot.png)
 
-[Add functionality description for the memory command here]
+
+The `systrack memory` command provides a comprehensive overview of the system's memory statistics. It displays information in a neatly formatted table with the following metrics:
+
+- **Total**: Total system memory (8.0 GB)
+- **Available**: Current available memory
+- **Used %**: Percentage of memory in use (80.7%)
+- **Used**: Amount of memory currently in use
+- **Free**: Amount of free memory
+- **Active**: Amount of active memory
+- **Inactive**: Amount of inactive memory
+- **Wired**: Amount of wired memory
+
+This command is useful for quickly assessing memory usage and availability, helping users identify potential memory constraints or optimization opportunities.
 
 ## systrack network
 
