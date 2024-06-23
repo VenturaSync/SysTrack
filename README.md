@@ -86,7 +86,7 @@ This command is particularly useful for quickly identifying the system's hardwar
 
 ## systrack memory
 
-![systrack memory command output](path_to_systrack_memory_screenshot.png)
+![systrack memory command output](images/systrack_memory.png)
 
 
 The `systrack memory` command provides a comprehensive overview of the system's memory statistics. It displays information in a neatly formatted table with the following metrics:
@@ -104,6 +104,6 @@ This command is useful for quickly assessing memory usage and availability, help
 
 ## systrack network
 
-![systrack network command output](path_to_systrack_network_screenshot.png)
+![systrack network command output](images/systrack_network.png)
 
 [Add functionality description for the network command here]
