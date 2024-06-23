@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/images/main.png" alt="alt text">
+  <img src="https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/main.png" alt="alt text">
 </p>
 
 <h1 align="center">SysTrack</h1>
