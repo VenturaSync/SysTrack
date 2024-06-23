@@ -28,7 +28,7 @@ This section provides an overview of all available commands in the SysTrack CLI 
 
 ## systrack help
 
-![systrack help command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_cpu.png)
+![systrack help command output](https://raw.githubusercontent.com/VenturaSync/SysTrack/main/images/systrack_help.png)
 
 The `systrack help` command provides an overview of all available commands in the SysTrack CLI tool. It displays a stylized ASCII art logo of "SysTrack" followed by usage instructions, available options, and a list of all commands with brief descriptions. This command is essential for users to quickly understand the tool's capabilities and how to use each feature. The help output includes information on CPU, dashboard, disk, hardware, memory, network, and temperature commands, giving users a comprehensive guide to monitoring various aspects of their system.
 
