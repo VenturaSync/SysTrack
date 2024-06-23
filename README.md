@@ -106,4 +106,11 @@ This command is useful for quickly assessing memory usage and availability, help
 
 ![systrack network command output](images/systrack_network.png)
 
-[Add functionality description for the network command here]
+The `systrack network` command offers a snapshot of the system's network activity. It presents network statistics in a clear, tabular format with four key metrics:
+
+1. **Bytes Sent**: Total number of bytes sent over the network
+2. **Bytes Received**: Total number of bytes received from the network
+3. **Packets Sent**: Total count of packets sent
+4. **Packets Received**: Total count of packets received
+
+This command is valuable for monitoring network traffic, troubleshooting connectivity issues, or analyzing data transfer patterns. The color-coded output enhances readability, making it easy to quickly interpret network activity at a glance.
